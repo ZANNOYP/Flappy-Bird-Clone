@@ -3099,10 +3099,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 2381fc3c75fc8eb45acea3003d3cb6f9, type: 3}
-  - {fileID: 8300000, guid: 4346362af12b93642b7e55203a6c8480, type: 3}
-  - {fileID: 8300000, guid: d93b7781e19cff34e918584539d42eb1, type: 3}
-  - {fileID: 8300000, guid: 52b230fe71c7fd243861c1471635baaa, type: 3}
+  - {fileID: 8300000, guid: 4a6caecd414ec0e49bb8df0bf856d5fc, type: 3}
+  - {fileID: 8300000, guid: f1e758fc392278d4084b4c78f0b71123, type: 3}
+  - {fileID: 8300000, guid: 9616ef8ddb910d447bae2018dac27c94, type: 3}
+  - {fileID: 8300000, guid: 207077e1c039bdb4e8e11031c5d11af2, type: 3}
   maxAudioSources: 4
   bgmClip: {fileID: 8300000, guid: ec39423bdd322f246b08a287ee65ea33, type: 3}
 --- !u!4 &2062589817
