@@ -74,8 +74,8 @@ public class BirdControl : MonoBehaviour
             MusicManager.Instance.PlayHitEff(1f);
             PipeManager.Instance.StopGenerate();
             Dead();
-            EndPanel.Instance.Show();
-            MidPanel.Instance.Hide();
+            UIManager.instance.ShowPanel<EndPanel>();
+            UIManager.instance.HidePanel<MidPanel>();
             ScoreManager.Instance.SetEndScore();
         }
     }
@@ -88,8 +88,8 @@ public class BirdControl : MonoBehaviour
             MusicManager.Instance.PlayHitEff(1f);
             PipeManager.Instance.StopGenerate();
             Dead();
-            EndPanel.Instance.Show();
-            MidPanel.Instance.Hide();
+            UIManager.instance.ShowPanel<EndPanel>();
+            UIManager.instance.HidePanel<MidPanel>();
             ScoreManager.Instance.SetEndScore();
         }
 
