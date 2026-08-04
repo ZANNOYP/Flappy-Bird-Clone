@@ -6,7 +6,7 @@ using UnityEngine;
 /// </summary>
 public class PipeManager : MonoBehaviour
 {
-    public static PipeManager Instance;
+    public static PipeManager instance;
 
     // 管道Y坐标范围
     public float minY;
@@ -33,7 +33,7 @@ public class PipeManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        instance = this;
     }
     // Start is called before the first frame update
     void Start()

@@ -15,7 +15,7 @@ public enum Eff_Type
 /// </summary>
 public class MusicManager : MonoBehaviour
 {
-    public static MusicManager Instance;
+    public static MusicManager instance;
     // 音效片段
     public List<AudioClip> clips = new List<AudioClip>();
     // 最大音源数量
@@ -31,7 +31,7 @@ public class MusicManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        instance = this;
         PlayBGM();
     }
     // Start is called before the first frame update
@@ -51,7 +51,7 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     /// <param name="type"></param>
     /// <param name="volume"></param>
-    public void PlayEff(Eff_Type type,float volume)
+    public void PlayEff(Eff_Type type, float volume = 1f)
     {
         AudioSource audioSource;
         if (audioSources.Count < maxAudioSources)

@@ -62,7 +62,7 @@ public class BirdControl : MonoBehaviour
     /// </summary>
     public void Jump()
     {
-        MusicManager.Instance.PlayFlyEff(1f);
+        MusicManager.instance.PlayFlyEff(1f);
         rb.velocity = upVelocity;
     }
 
@@ -71,12 +71,8 @@ public class BirdControl : MonoBehaviour
         // 碰到地面死亡
         if (collision.gameObject.CompareTag("Ground")) 
         {
-            MusicManager.Instance.PlayHitEff(1f);
-            PipeManager.Instance.StopGenerate();
-            Dead();
-            UIManager.instance.ShowPanel<EndPanel>();
-            UIManager.instance.HidePanel<MidPanel>();
-            ScoreManager.Instance.SetEndScore();
+            MusicManager.instance.PlayEff(Eff_Type.Hit);
+            GameFlowManager.instance.OverGame();
         }
     }
 
@@ -85,19 +81,15 @@ public class BirdControl : MonoBehaviour
         // 碰到管道死亡
         if (collision.gameObject.CompareTag("Pipe"))
         {
-            MusicManager.Instance.PlayHitEff(1f);
-            PipeManager.Instance.StopGenerate();
-            Dead();
-            UIManager.instance.ShowPanel<EndPanel>();
-            UIManager.instance.HidePanel<MidPanel>();
-            ScoreManager.Instance.SetEndScore();
+            MusicManager.instance.PlayEff(Eff_Type.Hit);
+            GameFlowManager.instance.OverGame();
         }
 
         // 穿过管道得分
         if (collision.gameObject.CompareTag("BlankPipe"))
         {
-            MusicManager.Instance.PlayAwardEff(1f);
-            ScoreManager.Instance.AddScore();
+            MusicManager.instance.PlayAwardEff(1f);
+            ScoreManager.instance.AddScore();
         }
     }
 

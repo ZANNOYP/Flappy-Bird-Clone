@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance;
+    public static ScoreManager instance;
     // 分数文本
     public TextMeshProUGUI textScore;
     // 结束分数文本
@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        instance = this;
         highestScore = PlayerPrefs.GetInt("HighestScore", 0);
     }
     // Start is called before the first frame update
